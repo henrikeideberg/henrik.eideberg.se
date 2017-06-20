@@ -1,0 +1,67 @@
+<!DOCTYPE html> <!-- Mean this is HTML5 -->
+<html lang="en">
+  <head>
+    <title>henrik.eideberg.se</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <!--
+    <link rel="stylesheet" type="text/css" href="mobile.css" rel="stylesheet" media="screen and (width-max:480px)">
+    -->
+    <style>
+      <!-- 
+      Här kan jag lägga till CSS intern styling om jag vill skriva över 
+      den externa CSS stylingen angiven i mystyle.css
+      -->
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="navbar"> <!-- Lägg navigerings innehållet i boxen navbar -->
+        <picture> <!-- ladda olika bilder beroende på skärmstorlek -->
+          <source srcset="images/logo.jpg" media="(min-width: 768px)">
+          <source srcset="images/blackPx.png">
+          <img src="images/logo.jpg" alt="Willem vid Rökstenen">
+        </picture>
+        <h1>Meny</h1>
+        <ul class="linksNavbar"> <!-- Gör länkarna i navbar som en onumrerad lista -->
+          <li><a href="">link 1</a></li>
+          <li><a href="">link 2</a></li>
+          <li><a href="">link 3</a></li>
+          <li><a href="https://sv.wikipedia.org/wiki/R%C3%B6kstenen">Rökstenen på Wikipedia</a></li>
+        </ul>
+      </div>
+      <div class="content"> <!-- Lägg sidans innehåll i boxen content -->
+        <h1 class="contentHeader">Rökstenen 2016</h1>
+        <div class="gallery"> <!-- Använd gallery klassen för att 'rada' upp bilderna efter varandra -->
+          <img src="images/001.jpg" alt="Landskap">
+          <br>
+          Rökstenen ligger i ett väldigt vackert landskap.
+        </div>
+        <div class="gallery">
+          <img src="images/003.jpg" alt="Karin och Willem vid Rökstenen">
+          <br>
+          Willem och mormor Karin vid Rökstenen.
+        </div>
+        <div class="gallery">
+          <img src="images/004.jpg" alt="Ed och Barbara vid Rökstenen">
+          <br>
+          Ed och Barbara (gäster från USA) vid Rökstenen.
+        </div>
+        <hr>
+        <div class="floatright"> <!-- Använd en div med flot: right för att visa en bild till höger om texten -->
+          <img src="images/002.jpg" alt="Willem läser information om Rökstenen" class="imageContent">
+          <br>
+          Willem
+        </div>
+        <div class="setHeight"> <!-- Använd en box med specifik storlek för att nå ned till hela sidan -->
+          <p class="leftText">
+            Under sommaren 2016 besökte Ed och Barbara oss. Vi bodde i Motala och under en dagstur åkte vi till Rökstenen som ligger i Ödeshög. Rökstenen är en av Sveriges mest kända runstenar. Dess inskrift är med sina 760 tecken vara världens längsta runinskrift. Stenen är belägen vid Röks kyrka i Röks socken, Ödeshögs kommun och Lysings härad i Östergötland. Rökstenen sägs ibland vara startpunkten i den svenska litteraturens historia som det äldsta bevarade litterära verket. Stenen är ett block av ljusgrå finkornig granit, cirka 382 cm hög (varav 125 cm under marken), 138 cm bred samt mellan 19 och 43 cm tjock. Stenblocket har förmodligen hämtats i närheten.
+          </p>
+        </div>
+        <hr>
+        <p class="footer">Skriven i HTML5</p>
+      </div>
+    </div>
+  </body>
+</html>
