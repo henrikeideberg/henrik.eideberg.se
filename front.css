@@ -1,0 +1,44 @@
+/*
+ ******************************************************
+ ***** General settings that apply to all devices *****
+ ******************************************************
+*/
+body {
+  background-color: white;
+  font-family: verdana; /* useful link with lots of fonts: http://www.angelfire.com/fl5/html-tutorial/fontlist.htm */
+  color: black; /* Color of text */
+  /* To make the content reach the edges of the browser window
+     we set the margin and padding of the body and html elements to zero. */
+  margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+  padding: 0px;
+}
+
+.headerBar {
+  text-align: center;
+  height: 75px;
+}
+
+.contentImage {
+  background: green;
+  background-image: url("images/max_saturation.jpg");
+  height: 500px;
+}
+
+.contentText {
+}
+
+.footerBar {
+  background: grey;
+  color: white;
+}
+
+/*
+ **************************************************************
+ ***** Settings that apply to desktops (min-width: 768px) *****
+ **************************************************************
+*/
+@media only screen and (min-width: 768px) {
+  body {
+    background-color: white;
+  }
+}
