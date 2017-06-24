@@ -19,12 +19,21 @@ body {
 }
 
 .contentImage {
-  background: green;
+  background-color: green;
   background-image: url("images/max_saturation.jpg");
   height: 500px;
+
+  /* How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align */
+    width: 100%;
+    text-align: center;
 }
 
 .contentText {
+  height: 500px;
+  width: 100%;
+  text-align: center;
 }
 
 .footerBar {
@@ -32,6 +41,46 @@ body {
   color: white;
 }
 
+.iconContainer {
+  /* How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align */
+  display: inline-block;
+  margin: 300px 0px 0px 0px; /* top, right, bottom, left */
+}
+
+.previewContainer {
+  /* How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align */
+  display: inline-block;
+  margin: 50px 0px 0px 0px; /* top, right, bottom, left */
+}
+
+.iconGallery {
+  float: left;
+  width: 150px; /* 750/3=250. 750 is width of content box in which the gallery resides.
+                   3 is the number of pictures per row */
+  margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+  padding: 0px;
+}
+
+div.iconGallery img { /* Settings for images inside div gallery */
+  height: 100px;
+  width: 100px;
+}
+
+.previewGallery {
+  float: left;
+  width: 300px;
+  margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+  padding: 0px;
+}
+
+div.previewGallery img {
+  height: 150px;
+  width: 200px
+}
 /*
  **************************************************************
  ***** Settings that apply to desktops (min-width: 768px) *****
