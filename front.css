@@ -22,8 +22,13 @@ body {
   /* How to center a div in another div
    * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
    * This makes the inner div into an inline element that can be centered with text-align */
+    background-color: #ebfaeb;
     width: 100%;
     text-align: center;
+}
+
+.iconGallery {
+  padding: 10px;
 }
 
 div.iconGallery img { /* Settings for images inside div gallery */
@@ -35,6 +40,42 @@ div.iconGallery img { /* Settings for images inside div gallery */
   width: 100%;
   text-align: center;
 }
+
+.previewContainer {
+  /* How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align */
+  display: inline-block;
+  margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+}
+
+.previewGallery {
+  width: 300px;
+  margin: 50px 0px 50px 0px; /* top, right, bottom, left */
+  padding: 0px;
+}
+
+div.previewGallery img {
+  height: 150px;
+  width: 200px
+}
+
+div.previewGallery p {
+  text-align: left;
+}
+
+.footerBar {
+  background: grey;
+  color: white;
+  height: 75px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+div.footerBar a {
+  color: white;
+  text-decoration: none;
+}
 /*
  **************************************************************
  ***** Settings that apply to desktops (min-width: 768px) *****
@@ -42,7 +83,6 @@ div.iconGallery img { /* Settings for images inside div gallery */
 */
 @media only screen and (min-width: 768px) {
   .contentImage {
-    background-color: green;
     background-image: url("images/max_saturation.jpg");
     height: 500px;
   }
@@ -51,25 +91,12 @@ div.iconGallery img { /* Settings for images inside div gallery */
     height: 500px;
   }
 
-  .footerBar {
-    background: grey;
-    color: white;
-  }
-
   .iconContainer {
     /* How to center a div in another div
      * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
      * This makes the inner div into an inline element that can be centered with text-align */
     display: inline-block;
     margin: 300px 0px 0px 0px; /* top, right, bottom, left */
-  }
-
-  .previewContainer {
-    /* How to center a div in another div
-     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-     * This makes the inner div into an inline element that can be centered with text-align */
-    display: inline-block;
-    margin: 50px 0px 0px 0px; /* top, right, bottom, left */
   }
 
   .iconGallery {
@@ -82,13 +109,5 @@ div.iconGallery img { /* Settings for images inside div gallery */
 
   .previewGallery {
     float: left;
-    width: 300px;
-    margin: 0px 0px 0px 0px; /* top, right, bottom, left */
-    padding: 0px;
-  }
-
-  div.previewGallery img {
-    height: 150px;
-    width: 200px
   }
 }
