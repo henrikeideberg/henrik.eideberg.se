@@ -13,9 +13,29 @@ body {
   padding: 0px;
 }
 
-.headerBar {
-  text-align: center;
-  height: 75px;
+/* How to modify the bootstrap navbar
+ * https://stackoverflow.com/questions/19890700/change-navbar-height-in-bootstrap3
+ * https://stackoverflow.com/questions/21886966/bootstrap-dropdown-change-the-height-of-navbar?noredirect=1&lq=1
+*/
+.navbar {
+    min-height: 75px; /* Default is 50px */
+    height: 75px; /* Default is 50px */
+    margin-bottom: 0px;
+    /*border: 1px solid transparent; */
+}
+
+.navbar-brand {
+  /* The .navbar-brand class got a height of 50px.
+     Defined by a padding of 15px + a line-height of 20px;. (2 x 15 + 20 = 50).*/
+  line-height: 44px; /* Default is 20px */
+}
+
+.navbar-nav > li > a {
+  line-height: 44px; /* Default is 20px */
+}
+
+.navbar-custom {
+    background-color: white;
 }
 
 .contentImage {

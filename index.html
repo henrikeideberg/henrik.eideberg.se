@@ -4,8 +4,10 @@
     <title>henrik.eideberg.se</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="front.css">
-    <link rel="stylesheet" type="text/css" href="mobile.css" rel="stylesheet" media="screen and (width-max:480px)">
     <style>
       <!--
       Add inline style here
@@ -15,9 +17,27 @@
   </head>
   <body>
     <div class="main-container">
-      <div class="headerBar">
-        HEADER
-      </div>
+      <!-- The collapseable navbar is made according to https://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_navbar_collapse&stacked=h -->
+      <nav class="navbar navbar-default navbar-custom">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">-</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">Running</a></li>
+              <li><a href="#">Books</a></li>
+              <li><a href="#">CV</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
       <div class="contentImage">
         <div class="iconContainer">
           <div class="iconGallery">
@@ -25,7 +45,6 @@
           </div>
           <div class="iconGallery">
             <img src="icons/pileOfBooks.png">
-            <!-- <i class="fa fa-book fa-5x" aria-hidden="true"></i> -->
           </div>
           <div class="iconGallery">
             <img src="icons/cv.png">
@@ -33,7 +52,7 @@
         </div>
       </div>
       <div class="contentText">
-        <h2>LATEST NEWS</h2>
+        <h2>Latest</h2>
         <div class="previewContainer">
           <div class="previewGallery">
             <img src="images/new.jpeg"><br>
@@ -58,11 +77,11 @@
       <div class="footerBar">
         <a href="https://www.facebook.com/henrik.eideberg" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
         <a href="https://twitter.com/hekeig" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>
-        <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
-        <i class="fa fa-linkedin fa-lg" aria-hidden="true"></i>
-        <i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i>
-        <i class="fa fa-github fa-lg" aria-hidden="true"></i>
-        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+        <a href="https://plus.google.com/u/0/114324369531571695150" target="_blank"><i class="fa fa-google-plus fa-lg" aria-hidden="true"></i></a>
+        <a href="https://se.linkedin.com/in/henrikeideberg" target="_blank"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+        <a href="https://www.youtube.com/channel/UCpipiBfYlFbYELeGp0WuXHwv" target="_blank"><i class="fa fa-youtube-play fa-lg" aria-hidden="true"></i></a>
+        <a href="https://github.com/henrikeideberg" target="_blank"><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+        <a href="mailto:henrik@eideberg.se" target="_top"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a>
       </div>
     </div>
   </body>
