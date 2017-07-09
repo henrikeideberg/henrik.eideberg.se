@@ -7,13 +7,22 @@ body {
   background-color: white;
   font-family: verdana; /* useful link with lots of fonts: http://www.angelfire.com/fl5/html-tutorial/fontlist.htm */
   color: black; /* Color of text */
-  /* To make the content reach the edges of the browser window
-     we set the margin and padding of the body and html elements to zero. */
+  /*
+   * To make the content reach the edges of the browser window
+   * we set the margin and padding of the body and html elements to zero.
+   */
   margin: 0px 0px 0px 0px; /* top, right, bottom, left */
   padding: 0px;
 }
 
-/* How to modify the bootstrap navbar
+.headerBar {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*
+ * How to modify the bootstrap navbar
  * https://stackoverflow.com/questions/19890700/change-navbar-height-in-bootstrap3
  * https://stackoverflow.com/questions/21886966/bootstrap-dropdown-change-the-height-of-navbar?noredirect=1&lq=1
 */
@@ -21,28 +30,60 @@ body {
     min-height: 75px; /* Default is 50px */
     height: 75px; /* Default is 50px */
     margin-bottom: 0px;
-    /*border: 1px solid transparent; */
+    /*border: 1px solid transparent; */ /* Default */
+    border-left: none;
+    border-right: none;
 }
 
 .navbar-brand {
-  /* The .navbar-brand class got a height of 50px.
-     Defined by a padding of 15px + a line-height of 20px;. (2 x 15 + 20 = 50).*/
-  line-height: 44px; /* Default is 20px */
+  /*
+   * The .navbar-brand class got a height of 50px.
+   * Defined by a padding of 15px + a line-height of 20px;. (2 x 15 + 20 = 50).
+   */
+  line-height: 43px; /* Default is 20px */
 }
 
 .navbar-nav > li > a {
-  line-height: 44px; /* Default is 20px */
+  /*
+   * The .navbar-nav class got a height of 50px.
+   * Defined by a padding of 15px + a line-height of 20px;. (2 x 15 + 20 = 50).
+   */
+  line-height: 43px; /* Default is 20px */
+	font-size: 15px;
+	font-weight: 400;
+	text-transform: uppercase;
 }
 
+/*
+ * https://stackoverflow.com/questions/16625972/change-color-of-bootstrap-navbar-on-hover-link
+ */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    /* background-color: #FFFF00; */ /* Not tp be changed */
+    color: #72c02c;
+    border-bottom: solid 1px #72c02c;
+}
+
+.navbar-default .navbar-nav > li.active > a {
+    color: #72c02c;
+    background-color: white;
+}
+
+/*
+ * Own class used to set the background color of navbar
+ */
 .navbar-custom {
     background-color: white;
 }
 
 .contentImage {
-  /* How to center a div in another div
+  /*
+   * How to center a div in another div
    * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-   * This makes the inner div into an inline element that can be centered with text-align */
+   * This makes the inner div into an inline element that can be centered with text-align
+   */
     background-color: #ebfaeb;
+    background-image: url("images/max_saturation.jpg");
     width: 100%;
     text-align: center;
 }
@@ -51,20 +92,26 @@ body {
   padding: 10px;
 }
 
-div.iconGallery img { /* Settings for images inside div gallery */
+/*
+ * Settings for images inside div gallery.
+ */
+div.iconGallery img {
   height: 100px;
   width: 100px;
 }
 
 .contentText {
+  height: auto; /* Let the browser calculate the height needed */
   width: 100%;
   text-align: center;
 }
 
 .previewContainer {
-  /* How to center a div in another div
+  /*
+   * How to center a div in another div
    * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-   * This makes the inner div into an inline element that can be centered with text-align */
+   * This makes the inner div into an inline element that can be centered with text-align
+   */
   display: inline-block;
   margin: 0px 0px 0px 0px; /* top, right, bottom, left */
 }
@@ -96,38 +143,57 @@ div.footerBar a {
   color: white;
   text-decoration: none;
 }
+
 /*
  **************************************************************
- ***** Settings that apply to desktops (min-width: 768px) *****
+ ***** Settings that apply to desktops (min-width: 768px),
+ ***** i.e. settings that apply for screen with width size
+ ***** equal and or greater than 768 pixels.
  **************************************************************
 */
 @media only screen and (min-width: 768px) {
   .contentImage {
-    background-image: url("images/max_saturation.jpg");
-    height: 500px;
-  }
-
-  .contentText {
     height: 500px;
   }
 
   .iconContainer {
-    /* How to center a div in another div
+    /*
+     * How to center a div in another div
      * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-     * This makes the inner div into an inline element that can be centered with text-align */
+     * This makes the inner div into an inline element that can be centered with text-align
+     */
     display: inline-block;
     margin: 300px 0px 0px 0px; /* top, right, bottom, left */
   }
 
   .iconGallery {
     float: left;
-    width: 150px; /* 750/3=250. 750 is width of content box in which the gallery resides.
-                     3 is the number of pictures per row */
+    /*
+     * 150 = (width of contentImage)/3.
+     * Width of contentImage (content box in which the gallery resides) is 100%.
+     * 3 is the number of pictures per row.
+     * Hence, this calculation does not apply at the moment and 150px is just
+     * selected by me.
+     */
+    width: 150px;
     margin: 0px 0px 0px 0px; /* top, right, bottom, left */
     padding: 0px;
   }
 
   .previewGallery {
     float: left;
+  }
+}
+
+/* Not needed at the moment */
+@media (min-width: 768px) and (max-width: 914px) {
+  .previewContainer {
+    /*
+     * How to center a div in another div
+     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+     * This makes the inner div into an inline element that can be centered with text-align
+     */
+    display: inline-block;
+    margin: 0px 0px 0px 100px; /* top, right, bottom, left */
   }
 }
