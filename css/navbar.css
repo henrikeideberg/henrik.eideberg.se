@@ -1,0 +1,60 @@
+/*
+ ******************************************************
+ ***** General settings that apply to all devices *****
+ ******************************************************
+*/
+
+/*
+ * How to modify the bootstrap navbar
+ * https://stackoverflow.com/questions/19890700/change-navbar-height-in-bootstrap3
+ * https://stackoverflow.com/questions/21886966/bootstrap-dropdown-change-the-height-of-navbar?noredirect=1&lq=1
+*/
+.navbar {
+    min-height: 75px; /* Default is 50px */
+    height: 75px; /* Default is 50px */
+    margin-bottom: 0px;
+    /*border: 1px solid transparent; */ /* Default */
+    border-left: none;
+    border-right: none;
+}
+
+.navbar-brand {
+  /*
+   * The .navbar-brand class got a height of 50px.
+   * Defined by a padding of 15px + a line-height of 20px;. (2 x 15 + 20 = 50).
+   */
+  line-height: 43px; /* Default is 20px */
+}
+
+.navbar-nav > li > a {
+  /*
+   * The .navbar-nav class got a height of 50px.
+   * Defined by a padding of 15px + a line-height of 20px;. (2 x 15 + 20 = 50).
+   */
+  line-height: 43px; /* Default is 20px */
+	font-size: 15px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+/*
+ * https://stackoverflow.com/questions/16625972/change-color-of-bootstrap-navbar-on-hover-link
+ */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    /* background-color: #FFFF00; */ /* Not tp be changed */
+    color: #72c02c;
+    border-bottom: solid 1px #72c02c;
+}
+
+.navbar-default .navbar-nav > li.active > a {
+    color: #72c02c;
+    background-color: white;
+}
+
+/*
+ * Own class used to set the background color of navbar
+ */
+.navbar-custom {
+    background-color: white;
+}
