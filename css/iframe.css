@@ -1,0 +1,11 @@
+/*
+ ******************************************************
+ ***** General settings that apply to all devices *****
+ ******************************************************
+*/
+img {
+  height: 175px;
+  width: 175px;
+  float: left;
+  margin-right: 20px;
+}

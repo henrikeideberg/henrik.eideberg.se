@@ -15,6 +15,20 @@ body {
   padding: 0px;
 }
 
+iframe { /* General iframe setting */
+  width: 67%;
+  height: 200px;
+  border: 0px;
+  border-bottom: 1px solid grey;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* This is to
+                            - remove the white spaces in between the iframes
+                              https://www.w3schools.com/css/css_display_visibility.asp
+                            - display the iframes in center of div contentText
+                            */
+}
+
 .headerBar {
   width: 50%;
   margin-left: auto;
@@ -22,62 +36,30 @@ body {
 }
 
 .contentImage {
-  /*
-   * How to center a div in another div
-   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-   * This makes the inner div into an inline element that can be centered with text-align
-   */
-    background-color: #ebfaeb;
-    background-image: url("../running/images/background_wood.jpg");
-    width: 100%;
-    text-align: center;
-}
-
-.iconGallery {
-  padding: 10px;
-}
-
-/*
- * Settings for images inside div gallery.
- */
-div.iconGallery img {
-  height: 100px;
-  width: 100px;
+  background-color: #ebfaeb;
+  background-image: url("../running/images/background_wood_1920x1080.jpg");
+  width: 100%;
+  height: 300px;
 }
 
 .contentText {
   height: auto; /* Let the browser calculate the height needed */
   width: 100%;
-  text-align: center;
-}
-
-.previewContainer {
   /*
    * How to center a div in another div
    * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
    * This makes the inner div into an inline element that can be centered with text-align
    */
-  display: inline-block;
-  margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+  text-align: center;
+  padding-top: 5px;
 }
 
-.previewGallery {
-  width: 300px;
-  margin: 50px 0px 50px 0px; /* top, right, bottom, left */
-  padding: 0px;
-}
-
-div.previewGallery img {
-  height: 150px;
-  width: 200px
-}
-
-div.previewGallery p {
-  text-align: left;
+.iframeContainer {
+  /* Nothing here at the moment */
 }
 
 .footerBar {
-  background: grey;
+  background: black;
   color: white;
   height: 75px;
   text-align: center;
@@ -97,48 +79,5 @@ div.footerBar a {
  **************************************************************
 */
 @media only screen and (min-width: 768px) {
-  .contentImage {
-    height: 500px;
-  }
-
-  .iconContainer {
-    /*
-     * How to center a div in another div
-     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-     * This makes the inner div into an inline element that can be centered with text-align
-     */
-    display: inline-block;
-    margin: 300px 0px 0px 0px; /* top, right, bottom, left */
-  }
-
-  .iconGallery {
-    float: left;
-    /*
-     * 150 = (width of contentImage)/3.
-     * Width of contentImage (content box in which the gallery resides) is 100%.
-     * 3 is the number of pictures per row.
-     * Hence, this calculation does not apply at the moment and 150px is just
-     * selected by me.
-     */
-    width: 150px;
-    margin: 0px 0px 0px 0px; /* top, right, bottom, left */
-    padding: 0px;
-  }
-
-  .previewGallery {
-    float: left;
-  }
-}
-
-/* Not needed at the moment */
-@media (min-width: 768px) and (max-width: 914px) {
-  .previewContainer {
-    /*
-     * How to center a div in another div
-     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-     * This makes the inner div into an inline element that can be centered with text-align
-     */
-    display: inline-block;
-    margin: 0px 0px 0px 100px; /* top, right, bottom, left */
-  }
+  /* Nothing here at the moment */
 }
