@@ -15,6 +15,19 @@ body {
   padding: 0px;
 }
 
+h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+hr {
+  width: 50px;
+  /*
+   * https://stackoverflow.com/questions/6382023/changing-the-color-of-an-hr-element
+   */
+  border-top: 2px solid #72c02c;
+}
+
 .headerBar {
   width: 50%;
   margin-left: auto;
@@ -54,6 +67,7 @@ div.iconGallery img {
    * This makes the inner div into an inline element that can be centered with text-align
    */
   text-align: center;
+  padding-top: 20px; /* To give some extra room/space between image and header */
 }
 
 .previewContainer {
@@ -70,15 +84,12 @@ div.iconGallery img {
   width: 300px;
   margin: 50px 0px 50px 0px; /* top, right, bottom, left */
   padding: 0px;
+  text-align: left;
 }
 
 div.previewGallery img {
   height: 150px;
   width: 200px
-}
-
-div.previewGallery p {
-  text-align: left;
 }
 
 .footerBar {
