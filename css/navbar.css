@@ -35,6 +35,7 @@
 	font-size: 15px;
 	font-weight: 400;
 	text-transform: uppercase;
+  background-color: white;
 }
 
 /*
@@ -42,9 +43,9 @@
  */
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-    /* background-color: #FFFF00; */ /* Not tp be changed */
     color: #72c02c;
     border-bottom: solid 1px #72c02c;
+    background-color: white;
 }
 
 .navbar-default .navbar-nav > li.active > a {
