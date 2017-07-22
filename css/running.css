@@ -3,6 +3,12 @@
  ***** General settings that apply to all devices *****
  ******************************************************
 */
+
+/*
+ * Inspiration
+ * https://wordpress.org/themes/zerif-lite/
+ */
+
 body {
   background-color: white;
   font-family: verdana; /* useful link with lots of fonts: http://www.angelfire.com/fl5/html-tutorial/fontlist.htm */

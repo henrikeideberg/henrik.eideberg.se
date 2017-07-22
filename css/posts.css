@@ -3,6 +3,23 @@
  ***** General settings that apply to all devices *****
  ******************************************************
 */
+body {
+  font-family: 'Lato', Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-size: 20px;
+  color: #267A6F;
+}
+
+hr {
+  width: 75px;
+  border-top: 2px solid #267A6F;
+  text-align:left;
+  margin-left:0
+}
+
 img {
   height: 175px;
   width: 175px;

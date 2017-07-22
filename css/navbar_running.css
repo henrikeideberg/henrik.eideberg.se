@@ -1,0 +1,23 @@
+/*
+ ******************************************************
+ ***** General settings that apply to all devices *****
+ ******************************************************
+*/
+/*
+ * https://stackoverflow.com/questions/16625972/change-color-of-bootstrap-navbar-on-hover-link
+ */
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #267A6F;
+    border-bottom: solid 1px #267A6F;
+    background-color: white;
+}
+
+.navbar-default .navbar-nav > li.active > a {
+    color: #267A6F;
+    background-color: white;
+}
+
+/* Color generator
+ * https://coolors.co/773344-e3b5a4-f5e9e2-0b0014-d44d5c
+ */
