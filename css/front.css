@@ -3,6 +3,11 @@
  ***** General settings that apply to all devices *****
  ******************************************************
 */
+
+/*
+ * Inspiration
+ * https://codurance.com/
+ */
 body {
   background-color: white;
   font-family: verdana; /* useful link with lots of fonts: http://www.angelfire.com/fl5/html-tutorial/fontlist.htm */

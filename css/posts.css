@@ -23,6 +23,34 @@ hr {
 img {
   height: 175px;
   width: 175px;
-  float: left;
-  margin-right: 20px;
+}
+
+.post_container {
+  /*
+   * How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align
+   */
+  text-align: center;
+}
+
+.post_content {
+  text-align: left;
+}
+
+/*
+ **************************************************************
+ ***** Settings that apply to desktops (min-width: 768px),
+ ***** i.e. settings that apply for screen with width size
+ ***** equal and or greater than 768 pixels.
+ **************************************************************
+*/
+@media only screen and (min-width: 768px) {
+  img {
+    margin-right: 20px;
+  }
+
+  .post_image {
+    float: left;
+  }
 }
