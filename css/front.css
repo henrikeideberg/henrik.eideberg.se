@@ -53,14 +53,14 @@ iframe { /* General iframe setting */
 }
 
 .contentImage {
-  /*
-   * How to center a div in another div
-   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
-   * This makes the inner div into an inline element that can be centered with text-align
-   */
     background-color: #ebfaeb;
     background-image: url("../images/background_4752x3168.jpg");
     width: 100%;
+    /*
+     * How to center a div in another div
+     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+     * This makes the inner div into an inline element that can be centered with text-align
+     */
     text-align: center;
 }
 

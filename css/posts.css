@@ -25,6 +25,11 @@ img {
   width: 175px;
 }
 
+a {
+  text-decoration: none;
+  color: #267A6F;
+}
+
 .post_container {
   /*
    * How to center a div in another div

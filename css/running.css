@@ -45,7 +45,26 @@ iframe { /* General iframe setting */
   background-color: #ebfaeb;
   background-image: url("../running/images/background_wood_1920x1080.jpg");
   width: 100%;
-  height: 300px;
+  /*height: 300px;*/
+  height: auto;
+  /*
+   * How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align
+   */
+  text-align: center;
+}
+
+.iconGallery {
+  padding: 10px;
+}
+
+/*
+ * Settings for images inside div gallery.
+ */
+div.iconGallery img {
+  height: 100px;
+  width: 100px;
 }
 
 .contentText {
@@ -85,5 +104,31 @@ div.footerBar a {
  **************************************************************
 */
 @media only screen and (min-width: 768px) {
-  /* Nothing here at the moment */
+  .contentImage {
+    height: 300px;
+  }
+
+  .iconContainer {
+    /*
+     * How to center a div in another div
+     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+     * This makes the inner div into an inline element that can be centered with text-align
+     */
+    display: inline-block;
+    margin: 100px 0px 0px 0px; /* top, right, bottom, left */
+  }
+
+  .iconGallery {
+    float: left;
+    /*
+     * 150 = (width of contentImage)/3.
+     * Width of contentImage (content box in which the gallery resides) is 100%.
+     * 3 is the number of pictures per row.
+     * Hence, this calculation does not apply at the moment and 150px is just
+     * selected by me.
+     */
+    width: 150px;
+    margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+    padding: 0px;
+  }
 }
