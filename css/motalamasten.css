@@ -1,0 +1,103 @@
+/*
+ ******************************************************
+ ***** General settings that apply to all devices *****
+ ******************************************************
+*/
+
+/*
+ * Inspiration
+ * https://codurance.com/
+ */
+body {
+  background-color: white;
+  font-family: verdana; /* useful link with lots of fonts: http://www.angelfire.com/fl5/html-tutorial/fontlist.htm */
+  color: black; /* Color of text */
+  /*
+   * To make the content reach the edges of the browser window
+   * we set the margin and padding of the body and html elements to zero.
+   */
+  margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+  padding: 0px;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+hr {
+  width: 50px;
+  /*
+   * https://stackoverflow.com/questions/6382023/changing-the-color-of-an-hr-element
+   */
+  border-top: 2px solid #72c02c;
+}
+
+iframe { /* General iframe setting */
+  width: 600px;
+  height: 1600px;
+  border: 0px;
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* This is to
+                            - remove the white spaces in between the iframes
+                              https://www.w3schools.com/css/css_display_visibility.asp
+                            - display the iframes in center of div
+                            */
+}
+
+.headerBar {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contentImage {
+    background-color: white;
+    background-image: url("../family/motalamasten/images/banner.jpg");
+    background-size: cover;
+    height: 300px;
+    width: 100%;
+    /*
+     * How to center a div in another div
+     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+     * This makes the inner div into an inline element that can be centered with text-align
+     */
+    text-align: center;
+}
+
+.contentText {
+  height: auto; /* Let the browser calculate the height needed */
+  width: 100%;
+  /*
+   * How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align
+   */
+  text-align: center;
+  padding-top: 20px; /* To give some extra room/space between image and header */
+}
+
+.footerBar {
+  background: grey;
+  color: white;
+  height: 75px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+div.footerBar a {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+ **************************************************************
+ ***** Settings that apply to desktops (min-width: 768px),
+ ***** i.e. settings that apply for screen with width size
+ ***** equal and or greater than 768 pixels.
+ **************************************************************
+*/
+
+@media (min-width: 768px) and (max-width: 914px) {
+}
