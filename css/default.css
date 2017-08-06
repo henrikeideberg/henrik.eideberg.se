@@ -1,0 +1,111 @@
+/*
+ ******************************************************
+ ***** General settings that apply to all devices *****
+ ******************************************************
+*/
+
+/*
+ * Inspiration
+ * https://codurance.com/
+ */
+body {
+  background-color: white;
+  font-family: verdana; /* useful link with lots of fonts: http://www.angelfire.com/fl5/html-tutorial/fontlist.htm */
+  color: black; /* Color of text */
+  /*
+   * To make the content reach the edges of the browser window
+   * we set the margin and padding of the body and html elements to zero.
+   */
+  margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+  padding: 0px;
+}
+
+.headerBar {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contentImage {
+    background-color: #ebfaeb;
+    width: 100%;
+    height: auto;
+    /*
+     * How to center a div in another div
+     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+     * This makes the inner div into an inline element that can be centered with text-align
+     */
+    text-align: center;
+}
+
+.contentImageGallery {
+  padding: 10px;
+}
+
+/*
+ * Settings for images inside div gallery.
+ */
+div.contentImageGallery img {
+  height: 100px;
+  width: 100px;
+}
+
+.contentText {
+  height: auto; /* Let the browser calculate the height needed */
+  width: 100%;
+  /*
+   * How to center a div in another div
+   * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+   * This makes the inner div into an inline element that can be centered with text-align
+   */
+  text-align: center;
+}
+
+.footerBar {
+  background: black;
+  color: white;
+  height: 75px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+div.footerBar a {
+  color: white;
+  text-decoration: none;
+}
+
+/*
+ **************************************************************
+ ***** Settings that apply to desktops (min-width: 768px),
+ ***** i.e. settings that apply for screen with width size
+ ***** equal and or greater than 768 pixels.
+ **************************************************************
+*/
+@media only screen and (min-width: 768px) {
+  .contentImageContainer {
+    /*
+     * How to center a div in another div
+     * https://stackoverflow.com/questions/114543/how-to-horizontally-center-a-div-in-another-div
+     * This makes the inner div into an inline element that can be centered with text-align
+     */
+    display: inline-block;
+  }
+
+  .contentImageGallery {
+    float: left;
+    /*
+     * 150 = (width of contentImage)/3.
+     * Width of contentImage (content box in which the gallery resides) is 100%.
+     * 3 is the number of pictures per row.
+     * Hence, this calculation does not apply at the moment and 150px is just
+     * selected by me.
+     */
+    width: 150px;
+    margin: 0px 0px 0px 0px; /* top, right, bottom, left */
+    padding: 0px;
+  }
+
+  .previewGallery {
+    float: left;
+  }
+}
