@@ -10,11 +10,11 @@
  */
 
 iframe { /* General iframe setting */
-  width: 600px;
+  width: 700px;
   height: 1600px;
-  border: 0px;
   padding: 0;
   margin: 0;
+  border: 0;
   display: inline-block; /* This is to
                             - remove the white spaces in between the iframes
                               https://www.w3schools.com/css/css_display_visibility.asp

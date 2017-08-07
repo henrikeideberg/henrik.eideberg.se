@@ -17,12 +17,7 @@ hr {
   width: 75px;
   border-top: 2px solid #267A6F;
   text-align:left;
-  margin-left:0
-}
-
-img {
-  height: 175px;
-  width: 175px;
+  margin-left: 0
 }
 
 a {
@@ -39,6 +34,11 @@ a {
   text-align: center;
 }
 
+div.post_image img {
+  height: 175px;
+  width: 175px;
+}
+
 .post_content {
   text-align: left;
 }
@@ -51,11 +51,11 @@ a {
  **************************************************************
 */
 @media only screen and (min-width: 768px) {
-  img {
-    margin-right: 20px;
-  }
-
   .post_image {
     float: left;
+  }
+
+  div.post_image img {
+    margin-right: 20px;
   }
 }
