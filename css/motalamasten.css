@@ -10,7 +10,7 @@
  */
 
 iframe { /* General iframe setting */
-  width: 700px;
+  width: 200px;
   height: 1600px;
   padding: 0;
   margin: 0;
@@ -39,3 +39,17 @@ iframe { /* General iframe setting */
 .contentText {
   padding-top: 20px; /* To give some extra room/space between image and header */
 }
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    iframe { /* General iframe setting */
+      width: 600px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    iframe { /* General iframe setting */
+      width: 700px;
+    }
+  }
