@@ -10,6 +10,9 @@
     <link rel="stylesheet" type="text/css" href="../css/default.css">
     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <style>
+      div.galleryContainer {
+        margin: 0px 0px 100px 10px; /* top, right, bottom, left */
+      }
       div.gallery {
         border: 1px solid #ccc;
       }
@@ -57,6 +60,7 @@
         clear: both;
       }
       <!-- This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side, for screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).-->
+      <!-- https://www.w3schools.com/Css/tryit.asp?filename=trycss_image_gallery_responsive -->
     </style>
     <script src="https://use.fontawesome.com/20973d1792.js"></script> <!-- http://fontawesome.io/icons/ -->
   </head>
@@ -76,38 +80,37 @@
           </div>
           <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="../index.html">Home</a></li>
               <li><a href="../running/running.html">Running</a></li>
               <li><a href="#">Books</a></li>
-              <li><a href="#">Family</a></li>
+              <li class="active"><a href="#">Family</a></li>
               <li><a href="#">CV</a></li>
             </ul>
           </div>
         </div>
       </nav>
       </div>
-      <h2>Responsive Image Gallery</h2>
-      <h4>Resize the browser window to see the effect.</h4>
+      <div class="galleryContainer">
+        <h2>Family Gallery</h2>
 
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="motalamasten/motalamasten.html">
-            <img src="motalamasten/images/banner.jpg" alt="Motalamasten" width="300" height="200">
-          </a>
-          <div class="desc">Motalamasten 2017</div>
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="motalamasten/motalamasten.html">
+              <img src="motalamasten/images/banner.jpg" alt="Motalamasten" width="300" height="200">
+            </a>
+            <div class="desc">Motalamasten 2017</div>
+          </div>
         </div>
-      </div>
 
-
-      <div class="responsive">
-        <div class="gallery">
-          <a target="_blank" href="rokstenen/index.html">
-            <img src="rokstenen/images/logo.JPG" alt="Rökstenen" width="300" height="200">
-          </a>
-          <div class="desc">Rökstenen 2016</div>
+        <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="rokstenen/index.html">
+              <img src="rokstenen/images/logo.JPG" alt="Rökstenen" width="300" height="200">
+            </a>
+            <div class="desc">Rökstenen 2016</div>
+          </div>
         </div>
+        <div class="clearfix"></div>
       </div>
-      <div class="clearfix"></div>
       <div class="footerBar">
         <a href="https://www.facebook.com/henrik.eideberg" target="_blank"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
         <a href="https://twitter.com/hekeig" target="_blank"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a>

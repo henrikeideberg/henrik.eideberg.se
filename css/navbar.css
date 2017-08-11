@@ -16,6 +16,7 @@
     /*border: 1px solid transparent; */ /* Default */
     border-left: none;
     border-right: none;
+    border-bottom: none;
 }
 
 .navbar-brand {
