@@ -1,0 +1,43 @@
+<!DOCTYPE html> <!-- Mean this is HTML5 -->
+<html lang="sv">
+  <head>
+    <title>MachineLearning - Linear Regression with one variable using Gradient Descending</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css" rel="stylesheet" media="screen and (width-max:480px)">
+    -->
+    <style>
+      <!--
+      Här kan jag lägga till CSS intern styling om jag vill skriva över
+      den externa CSS stylingen angiven i mystyle.css
+      -->
+    </style>
+    <script src="plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <a href="https://drive.google.com/open?id=1gAfsHWeS-1XJGdPxNRXfLXpVordpvb9nSx7PGS0NgUA" target=_blank>Algorithms</a>
+    <fieldset>
+      <div id="originalData" style="width:90%;height:400px;"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Input variables</legend>
+      <p>theta0: <input type="number" value="0" id="theta0FromUser"/>
+         theta1: <input type="number" value="0" id="theta1FromUser"/></p>
+      <p>learning rate: <input type="number" value="0.0000001" id="learningRate"/>
+         count: <input type="number" value="20" id="count"/></p>
+    </fieldset>
+    <fieldset>
+      <legend>Operations</legend>
+      <input id="contour" type="button" value="Plot Contour" onclick="calculateCostAndPlot();" />
+      <input id="calcCount" type="button" value="Calculate theta0 and theta1 and plot" onclick="calculateAndPlot(document.getElementById('count').value, document.getElementById('theta0FromUser').value, document.getElementById('theta1FromUser').value);"/>
+      <input id="calcConv" type="button" value="Converge theta0 and theta1 and plot" onclick="convergeAndPlot(document.getElementById('theta0FromUser').value, document.getElementById('theta1FromUser').value);"/>
+    </fieldset>
+    <fieldset>
+      <legend>Results</legend>
+      <div id="testLine" style="width:90%;height:400px;"></div>
+    </fieldset>
+    <script src="main.js"></script>
+  </body>
+</html>
