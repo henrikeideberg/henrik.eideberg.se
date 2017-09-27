@@ -1,68 +1,155 @@
 <!DOCTYPE html> <!-- Mean this is HTML5 -->
 <html lang="en">
   <head>
-    <title>Machine</title>
+    <title>Machine Learning Matrix Operations in Javascript</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../css/default.css">
-    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
-    <script src="style.js"></script>
-    <script src="main.js"></script>
     <style>
-      /* The vertical tabs are according to
-       * https://www.w3schools.com/howto/howto_js_vertical_tabs.asp
-       */
-      /* When there is a lot more content, maybe move to accordion buttons
+      /* 
+       * Styled according to
+       * https://www.w3schools.com/tags/tag_fieldset.asp
        * https://www.w3schools.com/howto/howto_js_accordion.asp
+       * http://mathjs.org/docs/datatypes/matrices.html
        */
-      * {box-sizing: border-box}
-      body {font-family: "Lato", sans-serif;}
-      /* Style the tab */
-      div.tab {
-          float: left;
-          border: 1px solid #ccc;
-          background-color: #f1f1f1;
-          width: 30%;
-          height: 300px;
+      body {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
       }
-
-      /* Style the buttons inside the tab */
-      div.tab button {
-          display: block;
-          background-color: inherit;
-          color: black;
-          padding: 22px 16px;
-          width: 100%;
-          border: none;
-          outline: none;
-          text-align: left;
+      .stdFieldset {
+        background-color: #eee;
+        width: 80%;
+        margin: auto; /* used to center the fieldset */
+        border: none;
+      }
+      .codeFieldset {
+        background-color: white;
+        width: 80%;
+        margin: auto; /* used to center the fieldset */      
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+      }
+      button {
+          background-color: white;
+          color: #444;
           cursor: pointer;
-          transition: 0.3s;
+          padding: 10px;
+          width: 20%;
+          border: 1px solid blue;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
       }
-
-      /* Change background color of buttons on hover */
-      div.tab button:hover {
+      button.active, button:hover {
           background-color: #ddd;
       }
-
-      /* Create an active/current "tab button" class */
-      div.tab button.active {
-          background-color: #ccc;
-      }
-
-      /* Style the tab content */
-      .tabcontent {
+      button:after {
+          content: 'Show';/*'\002B' is unicode for +*/
+          color: blue;
+          font-weight: bold;
           float: left;
-          padding: 0px 12px;
-          border: 1px solid #ccc;
-          width: 70%;
-          border-left: none;
-          height: 300px;
-          display : none;
+          margin-left: 5px;
+      }
+      button.active:after {
+          content: 'Hide'; /*'\2212' is unicode for -*/
+      }
+      div.panel {
+          padding: 0 18px;
+          background-color: white;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
       }
     </style>
-    <script src="https://use.fontawesome.com/20973d1792.js"></script> <!-- http://fontawesome.io/icons/ -->
+    <script src="math.js"></script> 
   </head>
   <body>
-    <a href="https://www.coursera.org/learn/machine-learning/supplement/Xl0xT/matrix-multiplication-properties">put this here</a>
+    <fieldset class="stdFieldset">
+      <h2>Identity, Inverse and Transpose</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          % Initialize random matrices A and B<br>
+          A = [1,2;4,5]<br>
+          B = [1,1;0,2]<br><br>      
+          % Initialize a 2 by 2 identity matrix<br>
+          I = eye(2)<br><br>
+          % Calculate the inverse of a <br>
+          inverse_a = math.inv(a)
+        </p>
+        <button class="identityInverseTransposeAccordion" onclick="identityInverseTranspose();"></button>
+        <div class="panel">
+          <p id="identityInverseTransposeDiv"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>Matrix-Matrix multiplication</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          % Initialize a 3 by 2 matrix<br>
+          A = [1, 2; 3, 4;5, 6]<br><br>
+          % Initialize a 2 by 1 matrix<br>
+          B = [1; 2]<br><br>
+          % We expect a resulting matrix of (3 by 2)*(2 by 1) = (3 by 1)<br>
+          mult_AB = A*B
+        </p>
+        <button class="matrixMatrixMultiplicationAccordion" onclick="matrixMatrixMultiplication();"></button>
+        <div class="panel">
+          <p id="matrixMatrixMultiplicationDiv"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>Vector-Matrix multiplication</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          % Initialize matrix A<br>
+          A = [1, 2, 3; 4, 5, 6;7, 8, 9]<br>
+          % Initialize vector v<br>
+          v = [1; 1; 1]<br><br>
+          % Multiply A * v<br>
+          Av = A * v
+        </p>
+        <button class="vectorMatrixMultiplicationAccordion" onclick="vectorMatrixMultiplication();"></button>
+        <div class="panel">
+          <p id="vectorMatrixMultiplicationDiv"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>Matrix Addition, subtraction and scalar multiplication and division</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          A = [1, 2, 4; 5, 3, 2]<br>
+          B = [1, 3, 4; 1, 1, 1]<br>
+          s = 2<br>
+          add_AB = A + B<br>
+          sub_AB = A - B<br>
+          mult_As = A * s<br>
+          div_As = A / s<br>
+          add_As = A + s<br>
+        </p>
+        <button class="matrixAddSubScMultiAccordion" onclick="matrixAddSubScMulti();"></button>
+        <div class="panel">
+          <p id="matrixAddSubScMultiDiv"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>Define Matrix</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          A = [1, 2, 3; 4, 5, 6; 7, 8, 9; 10, 11, 12]<br>
+          v = [1;2;3]<br>
+          [m,n] = size(A)<br>
+          dim_A = size(A)<br><br>
+          % Now let's index into the 2nd row 3rd column of matrix A<br>
+          A_23 = A(2,3)
+        </p>
+        <button class="defineMatrixAccordion" onclick="defineMatrix();"></button>
+        <div class="panel">
+          <p id="defineMatrixDiv"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <script src="main.js"></script>
   </body>
 </html>
