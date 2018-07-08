@@ -1,0 +1,140 @@
+<!DOCTYPE html> <!-- Mean this is HTML5 -->
+<html lang="en">
+  <head>
+    <title>Machine Learning Correlation Operations in Javascript</title>
+    <meta charset="utf-8">
+    <style>
+      /* 
+       * Styled according to
+       * https://www.w3schools.com/tags/tag_fieldset.asp
+       * https://www.w3schools.com/howto/howto_js_accordion.asp
+       * http://mathjs.org/docs/datatypes/matrices.html
+       */
+      body {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      .stdFieldset {
+        background-color: #eee;
+        width: 80%;
+        margin: auto; /* used to center the fieldset */
+        border: none;
+      }
+      .codeFieldset {
+        background-color: white;
+        width: 90%;
+        margin: auto; /* used to center the fieldset */      
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+      }
+      button {
+          background-color: white;
+          color: #444;
+          cursor: pointer;
+          padding: 10px;
+          width: 20%;
+          border: 1px solid green;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          transition: 0.4s;
+      }
+      button.active, button:hover {
+          background-color: #ddd;
+      }
+      button:after {
+          content: 'Show';/*'\002B' is unicode for +*/
+          color: green;
+          font-weight: bold;
+          float: left;
+          margin-left: 5px;
+      }
+      button.active:after {
+          content: 'Hide'; /*'\2212' is unicode for -*/
+      }
+      div.panel {
+          padding: 0 18px;
+          background-color: white;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+      }
+    </style>
+    <script src="math.js"></script> 
+  </head>
+  <body>
+    <fieldset class="stdFieldset">
+      <h2>Correlation</h2>
+        <p>
+          Let X1, X2 and X3 be the three different vectors and each one has 6 samples.<br>
+          Find the correlations between the variable vectors: X1 and X2, X1 and X3, X2 and X3 using correlation coefficient approach.
+        </p>
+        <p>
+          The sample values of three vectors are given as<br>
+          X1 = {2.5, 3.6, 1.2, 0.8, 4.0, 3.4}<br>
+          X2 = {1.2, 1.0, 1.8, 0.9, 3.0, 2.2}<br>
+          X3 = {8.0, 15.0, 12.0, 6.0, 8.0, 10.0}
+        </p>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h3>Equations</h3>
+      <fieldset class="codeFieldset">
+        <p>
+          If your data is given in (x,y) pairs, then compute the following quantities:<br>
+          <ul>
+            <li>S<sub>xx</sub> = &sum;x<sup>2</sup> - (&sum;x)<sup>2</sup>/n</li>
+            <li>S<sub>yy</sub> = &sum;y<sup>2</sup> - (&sum;y)<sup>2</sup>/n</li>
+            <li>S<sub>xy</sub> = &sum;xy - (&sum;x)(&sum;y)/n</li>
+            <li><i>ρ</i><sub>x,y</sub> = S<sub>xy</sub>/&radic;(S<sub>xx</sub>S<sub>yy</sub>)</li>
+          </ul>
+          where
+          <ul>
+            <li>S<sub>xx</sub> is the standard deviation of x</li>
+            <li>S<sub>yy</sub> is the standard deviation of y</li>
+            <li>S<sub>xy</sub> is the covariance between x and y</li>
+            <li><i>ρ</i><sub>x,y</sub> is the correlation coefficient between x and y</li>
+          </ul>
+        </p>
+      </fieldset>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>Correlation between X1 and X2</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          X1 = {2.5, 3.6, 1.2, 0.8, 4.0, 3.4}<br>
+          X2 = {1.2, 1.0, 1.8, 0.9, 3.0, 2.2}<br>
+        </p>
+        <button class="corrX1X2" onclick="corrX1X2();"></button>
+        <div class="panel">
+          <p id="corrX1X2"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>Correlation between X1 and X3</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          X1 = {2.5, 3.6, 1.2, 0.8, 4.0, 3.4}<br>
+          X3 = {8.0, 15.0, 12.0, 6.0, 8.0, 10.0}
+        </p>
+        <button class="corrX1X3" onclick="corrX1X3();"></button>
+        <div class="panel">
+          <p id="corrX1X3"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>Correlation between X2 and X3</h2>
+      <fieldset class="codeFieldset">
+        <p>
+          X2 = {1.2, 1.0, 1.8, 0.9, 3.0, 2.2}<br>
+          X3 = {8.0, 15.0, 12.0, 6.0, 8.0, 10.0}
+        </p>
+        <button class="corrX2X3" onclick="corrX2X3();"></button>
+        <div class="panel">
+          <p id="corrX2X3"></p>
+        </div>
+      </fieldset>
+    </fieldset>
+    <script src="correlation.js"></script>
+  </body>
+</html>

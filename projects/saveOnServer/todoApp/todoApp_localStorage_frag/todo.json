@@ -1,0 +1,4 @@
+[{"task":"Get milk","who":"Scott","dueDate":"today","done":true},
+ {"task":"Get broccoli","who":"Elisabeth","dueDate":"today","done":false},
+ {"task":"get balsamic vinegar","who":"Georgia","dueDate":"2012-08-04","done":false},
+ {"task":"Walk Trish's dog","who":"Scott","dueDate":"2012-06-06","done":false}]

@@ -3,7 +3,7 @@
  */
 "use strict";
 
-function openCity(evt, cityName) {
+function openFrame(evt, cityName) {
     // Declare all variables
     var i, tabcontent, tablinks;
 

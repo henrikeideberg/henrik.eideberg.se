@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Mean this is HTML5 -->
+<html lang="en">
+  <head>
+    <title>Machine Learning K means clustering: Anomaly Detection</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="kmeanClusterImageDiff.css">
+    <style>
+      input {
+          width: 10%;
+          font-size: 22px;
+          color: green;
+      }
+    </style>
+    <script src="plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <fieldset class="stdFieldset">
+      <a href="https://drive.google.com/open?id=1twv4evGh41EGfDIOktNw8FSBd_FZG9kU-N283YjgcJk" target=_blank>Theory</a>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>K means clustering: Anomaly Detection</h2>
+      <p>
+        Assume that we have five different cryptocurrency prices which they
+        cannot be less than $0 and greater than $20.000.
+        These prices were obtained and stored in each two hours in a day.
+        However, some values were corrupted when they were stored.
+        Use K-means clustering method to cluster the prices into 6 different
+        clusters and detect the corrupted prices (Anomaly detection).
+      </p>
+      <h3>Cryptocurrency prices</h3>
+      <p>
+        $7845, $778, $942, $143, $0.75, $7956, $810, $976, $146, $0.76,
+        $8215, $825, $1002, $152, $0.78, $8542, $847, $1038, $157, $0.78,
+        $8150, $100587, $807, $1015, $150, $0.72, 8386, $884, $101964,
+        $1085, $138, $0.82, $8219, $827, $995, $158, $0.82, $7500, $745,
+        $948, $135, $0.67, $9257, $901, $120967, $1154, $148, $0.72,
+        $8553, $811, $1218, $175, $0.84
+      </p>
+    </fieldset>
+
+    <fieldset class="stdFieldset">
+      <h4>Calculate and Results</h4>
+      <p>
+        Apply K means clustering algorithm to identify clusters.
+      </p>
+      <p>
+        Press 'Step manually' button to perform step wise calculations of the
+        clusters. Press 'Converge' to directly calculate the clusters
+        (automatically perform all iterations). The result will be presented in
+        the plot.
+      </p>
+      <label for="fname">Number of clusters (1-10):</label>
+      <input type="number" id="nrOfClusters" min="1" max="10" placeholder="6" value=6>
+      <br>
+      <p>How to initially place centroids?</p>
+      <input type="radio" name="InitCentrPos" value="random" id="RadioBtnRandom" checked> Use random and unique data points<br>
+      <input type="radio" name="InitCentrPos" value="clusters"> Use initial n number data point (where n is number of clusters)<br>
+      <br>
+      <button onclick="kMeanManual(1);">Step manually</button>
+      <button onclick="kMeanConverge()">Converge</button>
+      <button onclick="Reset();">Start over</button>
+    </fieldset>
+
+    <fieldset class="stdFieldset">
+      <h4>Results and Plot information</h4>
+      <p id="plotInformation"></p>
+      <p id="result"></p>
+    </fieldset>
+
+    <fieldset class="stdFieldset">
+      <div id="clusterPlot" style="width:90%;height:500px;"></div>
+    </fieldset>
+
+    <script src="kmeanAnomalyDetection.js"></script>
+  </body>
+</html>

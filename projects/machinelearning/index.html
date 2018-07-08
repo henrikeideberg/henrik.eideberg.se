@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="../css/default.css">
     <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <script src="style.js"></script>
-    <script src="main.js"></script>
     <style>
       /* The vertical tabs are according to
        * https://www.w3schools.com/howto/howto_js_vertical_tabs.asp
@@ -77,11 +76,19 @@
   </head>
   <body>
     <div class="tab">
-      <button class="tablinks" onclick="openCity(event, 'Matrix')">Matrix</button>
-      <button class="tablinks" onclick="openCity(event, 'LinRegOneVarGraDesc')">LinRegOneVarGraDesc</button>
+      <button class="tablinks" onclick="openFrame(event, 'kMeansClustAnomalyDet')">k Means Clust: Anomaly Det</button>
+      <button class="tablinks" onclick="openFrame(event, 'kMeansClustImageDiff')">k Means Clust: Image Diff</button>
+      <button class="tablinks" onclick="openFrame(event, 'KNearestNeighbour')">k Nearest Neighbour</button>
+      <button class="tablinks" onclick="openFrame(event, 'Correlation')">Correlation</button>
+      <button class="tablinks" onclick="openFrame(event, 'LinRegOneVarGraDesc')">LinRegOneVarGraDesc</button>
+      <button class="tablinks" onclick="openFrame(event, 'Matrix')">Matrix</button>
     </div>
 
     <!-- How to make iframe 100% of page -->
+    <iframe src="kMean/kmeanAnomalyDetection.html" id="kMeansClustAnomalyDet" class="tabcontent"></iframe>
+    <iframe src="kMean/kmeanClusterImageDiff.html" id="kMeansClustImageDiff" class="tabcontent"></iframe>
+    <iframe src="kNearest/knearest.html" id="KNearestNeighbour" class="tabcontent"></iframe>
+    <iframe src="correlation/correlation.html" id="Correlation" class="tabcontent"></iframe>
     <iframe src="linregonevargradesc/index.html" id="LinRegOneVarGraDesc" class="tabcontent"></iframe>
     <iframe src="matrix/index.html" id="Matrix" class="tabcontent"></iframe>
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!-- Mean this is HTML5 -->
+<html lang="sv">
+  <head>
+    <title>MachineLearning - k nearest neighbour</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="mobile.css" rel="stylesheet" media="screen and (width-max:480px)">
+    -->
+    <style>
+      div.floating {
+        float: left;
+        margin-right: 50px;
+      }
+    </style>
+    <script src="plotly-latest.min.js"></script>
+    <script src="trainingSamples.js"></script>
+    <script src="testSamples.js"></script>
+  </head>
+  <body>
+    <a href="https://drive.google.com/open?id=10UFyocNIvnpHJMCYGYLhk5ni2zplyyqaf2zviyoG1K8" target=_blank>Theory</a>
+    <fieldset>
+      <div id="originalData" style="width:90%;height:500px;"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Test data</legend>
+      <div class="floating">
+        <p>Test sample 1 (t001)</p>
+        <div>rooms: 4</div>
+        <div>size: 100</div>
+        <div>age: 25</div>
+      </div>
+      <div class="floating">
+        <p>Test sample 2 (t002)</p>
+        <div>rooms: 1</div>
+        <div>size: 60</div>
+        <div>age: 20</div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Operations</legend>
+      <input id="test1OneN" type="button" value="Find price for test sample 1 with 1 neighbour" onclick="findPriceForTS1With1Neighbour();" />
+      <input id="test1TwoN" type="button" value="Find price for test sample 1 with 2 neighbour" onclick="findPriceForTS1With2Neighbour();" /><br><br>
+      <input id="test2OneN" type="button" value="Find price for test sample 2 with 1 neighbour" onclick="findPriceForTS2With1Neighbour();" />
+      <input id="test2TwoN" type="button" value="Find price for test sample 2 with 2 neighbour" onclick="findPriceForTS2With2Neighbour();" />
+    </fieldset>
+    <fieldset>
+      <legend>Results</legend>
+      <div id="testLine" style="width:90%;height:400px;"></div>
+    </fieldset>
+    <script src="main.js"></script>
+  </body>
+</html>

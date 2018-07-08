@@ -1,0 +1,66 @@
+<!--
+  TODO
+    a. Basic drag and drop functionality
+      1. implementera uploadMallorca.php
+         Forsätt på denna och lägg till validering (enligt nedan)
+          http://www.javascripthive.info/php/php-multiple-files-upload-validation/
+          https://www.w3schools.com/php/php_file_upload.asp
+    b. Advanced functionality
+      1. implementera progress-bar
+      2. implementera funktion 'previewAsImages'
+    c. File selection functionality
+      1. submit button?
+    d. Gallery of uploaded images
+      1. https://stackoverflow.com/questions/23740548/how-to-pass-variables-and-data-from-php-to-javascript
+      2. https://stackoverflow.com/questions/15774669/list-all-files-in-one-directory-php
+-->
+
+<!DOCTYPE html> <!-- Mean this is HTML5 -->
+<html lang="en">
+  <head>
+    <title>Mallorca Image Uploader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://html5demos.com/css/html5demos.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../../../css/default.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../../../css/navbar.css">
+  </head>
+  <style>
+    #dropZone {
+      border: 10px dashed #ccc;
+      width: 300px;
+      min-height: 300px;
+      margin: 20px auto;
+    }
+    #dropZone.hover { border: 10px dashed #0c0; }
+    #dropZone img { display: block; margin: 10px auto; }
+    #dropZone p { margin: 10px; font-size: 14px; }
+    .main {
+      width: 67%;
+      background: white;
+      margin: auto;
+      padding: 10px;
+    }
+    .hidden { display: none !important;}
+  </style>
+  <body>
+    <div class="main">
+      <p id="fileApiNotSupported">
+        File API &amp; FileReader API not supported.
+      </p>
+      <p id="formDataNotSupported">
+        XHR2's FormData is not supported
+      </p>
+      <p id="dragDropNotSupported">
+        Drag &amp; drop not supported, but you can still upload via this input field:<br><br>
+        <input type="file" id="fileSelection" name="files[]" multiple />
+      </p>
+      <p id="dragDropSupported">Drag image(s) from your filesystem on to the drop zone below to upload.</p>
+      <p>Upload progress: <progress id="uploadprogress" max="100" value="0">0</progress></p>
+      <div id="dropZone">
+      </div>
+      <output id="list"></output>
+    </div>
+    <script src="imageUploader.js"></script>
+  </body>
+</html>

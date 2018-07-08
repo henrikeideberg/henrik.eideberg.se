@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- Mean this is HTML5 -->
+<html lang="en">
+  <head>
+    <title>Machine Learning K means clustering: Image difference</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="kmeanClusterImageDiff.css">
+    <style>
+    </style>
+    <script src="plotly-latest.min.js"></script>
+  </head>
+  <body>
+    <fieldset class="stdFieldset">
+      <a href="https://drive.google.com/open?id=1twv4evGh41EGfDIOktNw8FSBd_FZG9kU-N283YjgcJk" target=_blank>Theory</a>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <h2>K means clustering: Image Difference</h2>
+      <p>
+        K means clustering algorithm can been used to cluster the pixel values
+        for the given input image. In this question, the algorithm has been
+        used to detect the changes between two images. The main purpose is
+        to obtain whether there is a big difference between two pixel values
+        at the same pixel coordinate or not.
+      </p>
+      <p>
+        Given below images A and B
+      </p>
+    </fieldset>
+
+    <fieldset class="stdFieldset">
+      <p>
+        Image A
+      </p>
+    </fieldset>
+    <div class="imageA" id="imageA">
+    </div>
+
+    <fieldset class="stdFieldset">
+      <p>
+        Image B
+      </p>
+    </fieldset>
+    <div class="imageB" id="imageB">
+    </div>
+
+
+    <fieldset class="stdFieldset">
+      <h3>Calculations</h3>
+      <p>
+        There are two steps to detect the changes between two images:
+      </p>
+      <h4>Step 1</h4>
+      <p>
+        Subtract two images to obtain difference image.
+        Difference = |A-B| for each pixel coordinate in the images
+        (|...| is shown as absolute value of the value).
+      </p>
+      <button onclick="calcDiffImage();">
+        Calculate Difference Image and plot the data
+      </button>
+    </fieldset>
+    <div class="diffImage" id="diffImage">
+    </div>
+    <fieldset class="stdFieldset">
+      <p id="diffImagePlotInformation"></p>
+    </fieldset>
+
+    <fieldset class="stdFieldset">
+      <h4>Step 2</h4>
+      <p>
+        Apply K means clustering algorithm to the difference image to obtain
+        the changed pixels as 1 and unchanged pixels as 0.
+      </p>
+      <p>
+        Press 'Step manually' button to perform step wise calculations of the
+        clusters. Press 'Converge' to directly calculate the clusters
+        (automatically perform all iterations). The result will be presented in
+        below plot.
+      </p>
+      <button onclick="kMeanManual(1);">Step manually</button>
+      <button onclick="kMeanConverge();">Converge</button>
+      <button onclick="Reset();">Start over</button>
+      <p id="plotInformation"></p>
+    </fieldset>
+    <fieldset class="stdFieldset">
+      <div id="clusterPlot" style="width:90%;height:500px;"></div>
+    </fieldset>
+    <script src="kmeanClusterImageDiff.js"></script>
+  </body>
+</html>

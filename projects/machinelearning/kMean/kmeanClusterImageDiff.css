@@ -1,0 +1,72 @@
+      /*
+       * Styled according to
+       * https://www.w3schools.com/tags/tag_fieldset.asp
+       * https://www.w3schools.com/howto/howto_js_accordion.asp
+       * http://mathjs.org/docs/datatypes/matrices.html
+       */
+      body {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+      }
+      .stdFieldset {
+        background-color: white;
+        width: 80%;
+        margin: auto; /* used to center the fieldset */
+        border: none;
+      }
+      .codeFieldset {
+        background-color: white;
+        width: 90%;
+        margin: auto; /* used to center the fieldset */
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+      }
+      button {
+          background-color: white;
+          /*color: #444;*/
+          color: green;
+          cursor: pointer;
+          padding: 10px;
+          /*width: 20%;*/
+          border: 1px solid green;
+          text-align: left;
+          outline: none;
+          font-size: 15px;
+          font-weight: bold;
+          transition: 0.4s;
+      }
+      button.active, button:hover {
+          background-color: #ddd;
+      }
+      /*
+      button:after {
+          color: green;
+          font-weight: bold;
+          float: left;
+          margin-left: 5px;
+      }
+      */
+      button.active:after {
+          content: 'Hide'; /*'\2212' is unicode for -*/
+      }
+      div.panel {
+          padding: 0 18px;
+          background-color: white;
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+      }
+
+      div.image {
+        padding: 10px;
+        width: 370px;
+        margin: auto; /* used to center the fieldset */
+      }
+      div.pixel {
+        display: block;
+        float: left;
+        width: 32px;
+        height: 20px;
+        background: #b3ffcc;
+        margin-right: 5px;
+        margin-top: 5px;
+      }
